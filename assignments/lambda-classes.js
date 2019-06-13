@@ -13,15 +13,26 @@ class Person {
     }
    
 class Instructor extends Person{
-    constructor()
+    constructor(inAtts) {
+        super(inAtts);
+        this.specialty = inAtts.specialty;
+		this.favLanguage = inAtts.favLanguage;
+		this.catchPhrase = inAtts.catchPhrase;
+    }
 }
 
-// class Instructor{
-//     constructor(instructAttributes) {
-//         this.specialty=instructAttributes.specialty;
-//     }
-//     class Instructor extends Person{
-//         super(instructAttributes);
-//         this.Instructor=attributes.Instructor;
-//     }
-// }
+class Student extends Person{
+    constructor(sAtts){
+        super(sAtts);
+        this.previousBackground = sAttributes.previousBackground;
+		this.className = sAttributes.className;
+		this.favoriteSubjects = sAttributes.favoriteSubjects;
+    }
+}
+class ProjectManager extends Instructor{
+    constructor(pmAtts){
+        super(pmAtts);
+        this.gradClassName=pmAtts.gradClassName;
+        this.favInstructor=pmAtts.favInstructor;
+    }
+}
