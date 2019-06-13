@@ -11,6 +11,7 @@ class Person {
     speak(){
         console.log (`Hello my name is ${this.name}, I am from ${this.location}`);
     }
+}
    
 class Instructor extends Person{
     constructor(inAtts) {
@@ -19,6 +20,12 @@ class Instructor extends Person{
 		this.favLanguage = inAtts.favLanguage;
 		this.catchPhrase = inAtts.catchPhrase;
     }
+    demo(subject) {
+		return `Today we are learning about ${subject}`;
+    }
+    grade(student, subject) {
+		return `${student.name} recieves a perfect score on ${subject}`
+	}
 }
 
 class Student extends Person{
@@ -27,6 +34,9 @@ class Student extends Person{
         this.previousBackground = sAttributes.previousBackground;
 		this.className = sAttributes.className;
 		this.favoriteSubjects = sAttributes.favoriteSubjects;
+    }
+    listsSubjects(){
+        
     }
 }
 class ProjectManager extends Instructor{
