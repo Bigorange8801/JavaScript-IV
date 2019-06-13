@@ -35,9 +35,12 @@ class Student extends Person{
 		this.className = sAttributes.className;
 		this.favoriteSubjects = sAttributes.favoriteSubjects;
     }
-    listsSubjects(){
-        
+    listsSubjects(css,javaScript,docker){
+        return `favorite subjects ${this.favoriteSubjects}`;
     }
+    PRAssignment(subject){
+		return `${this.name} has submitted a PR for ${subject}`;
+	}
 }
 class ProjectManager extends Instructor{
     constructor(pmAtts){
